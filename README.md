@@ -8,7 +8,7 @@ A hybrid SOC/NOC enterprise lab built with pfSense, Wazuh, and Zabbix for threat
 ![Wazuh](https://img.shields.io/badge/SIEM-Wazuh-purple)
 ![Zabbix](https://img.shields.io/badge/monitoring-Zabbix-red)
 ![Docker](https://img.shields.io/badge/deployed%20with-Docker-2496ED)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 
 ---
 
