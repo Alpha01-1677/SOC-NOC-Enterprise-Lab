@@ -26,9 +26,9 @@ The network is segmented into three zones, connected through a central pfSense f
 
 | Zone | Subnet | Role |
 |---|---|---|
-| **Management LAN** | `10.10.10.x` | The "control room" — hosts the Ubuntu Docker server (`10.10.10.50`) running Wazuh (SIEM) and Zabbix (monitoring) |
-| **Corporate Network (CORP)** | `10.10.20.x` | Simulated employee workspace — Windows 10 endpoint (`10.10.20.10`) running a Wazuh agent + Sysmon |
-| **DMZ** | `10.10.30.x` | Public-facing zone — Ubuntu web server (`10.10.30.102`) running Nginx + Wazuh agent |
+| **Management LAN** | `10.10.10.x` | The "control room" - hosts the Ubuntu Docker server (`10.10.10.50`) running Wazuh (SIEM) and Zabbix (monitoring) |
+| **Corporate Network (CORP)** | `10.10.20.x` | Simulated employee workspace - Windows 10 endpoint (`10.10.20.10`) running a Wazuh agent + Sysmon |
+| **DMZ** | `10.10.30.x` | Public-facing zone - Ubuntu web server (`10.10.30.102`) running Nginx + Wazuh agent |
 
 Agents installed on the Windows and DMZ endpoints continuously stream logs back to the Management LAN. Zabbix checks system/network health (ICMP, SNMP), while Wazuh analyzes security-relevant events and raises alerts by severity.
 
@@ -48,8 +48,8 @@ Agents installed on the Windows and DMZ endpoints continuously stream logs back 
 |---|---|---|
 | **pfSense** | Network routing, segmentation, firewall boundary enforcement | Industry-standard open-source firewall with robust VLAN capabilities |
 | **Suricata** | Network-perimeter Intrusion Detection System (IDS) | Deep packet inspection to catch malicious traffic before it reaches endpoints |
-| **Wazuh** | SOC platform — log analysis, file integrity monitoring, EDR | Open-source SIEM that maps alerts directly to MITRE ATT&CK |
-| **Zabbix** | NOC platform — infrastructure and performance monitoring | Scalable; supports agent-based and agentless (SNMP/ICMP) monitoring |
+| **Wazuh** | SOC platform - log analysis, file integrity monitoring, EDR | Open-source SIEM that maps alerts directly to MITRE ATT&CK |
+| **Zabbix** | NOC platform - infrastructure and performance monitoring | Scalable; supports agent-based and agentless (SNMP/ICMP) monitoring |
 | **Docker & Compose** | Containerization for Wazuh and Zabbix | Consistent, reliable deployment of complex backend stacks on one host |
 | **Sysmon** | Advanced Windows endpoint telemetry | Granular visibility into process creation and network connections |
 | **Kali Linux** | Offensive security testing | Used to simulate real-world attacks (SQLi, XSS, privilege escalation) |
