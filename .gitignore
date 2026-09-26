@@ -1,0 +1,42 @@
+# =========================
+# Environments and Secrets
+# =========================
+.env
+.env.*
+*.pem
+*.key
+*.cert
+secrets.yml
+credentials.txt
+*password*
+
+# =========================
+# Virtual Machines & Docker
+# =========================
+*.vmdk
+*.ova
+*.qcow2
+.vagrant/
+volumes/
+docker-data/
+
+# =========================
+# Logs and Databases
+# =========================
+*.log
+/logs/
+*.sqlite
+*.db
+
+# =========================
+# OS Generated Files
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# =========================
+# Office Temporary Files
+# =========================
+~$*.docx
+~$*.doc
