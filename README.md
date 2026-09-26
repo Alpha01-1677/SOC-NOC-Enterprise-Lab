@@ -16,7 +16,7 @@ A hybrid SOC/NOC enterprise lab built with pfSense, Wazuh, and Zabbix for threat
 
 This project is a fully functional, hybrid **NOC + SOC** lab that reflects how real enterprises monitor both infrastructure health and security posture from a single operations environment. It combines centralized SIEM-based threat detection with performance/uptime monitoring, all running on a segmented network built with enterprise-grade firewall routing.
 
-The lab simulates real attack scenarios — reconnaissance, brute force, privilege escalation, and web application attacks — and validates that the detection stack actually catches them, with incident handling modeled on **NIST SP 800-61 Rev 2** and detections mapped to the **MITRE ATT&CK** framework.
+The lab simulates real attack scenarios - reconnaissance, brute force, privilege escalation, and web application attacks - and validates that the detection stack actually catches them, with incident handling modeled on **NIST SP 800-61 Rev 2** and detections mapped to the **MITRE ATT&CK** framework.
 
 ## Architecture
 
@@ -58,10 +58,10 @@ Agents installed on the Windows and DMZ endpoints continuously stream logs back 
 
 > Full step-by-step instructions with screenshots are in [`docs/SOC_NOC_Complete_Documentation.docx`](docs/SOC_NOC_Complete_Documentation.docx).
 
-1. **Network Preparation** — Install pfSense; configure three interfaces (LAN, CORP, DMZ); set subnets and firewall rules allowing management traffic from LAN to CORP/DMZ.
-2. **Core Server Deployment** — Install Ubuntu Server (`10.10.10.50`) on the LAN; install Docker + Docker Compose; deploy the Wazuh Manager/Indexer stack and Zabbix Server via `docker-compose.yml`.
-3. **Endpoint Agent Installation** — Deploy a Windows 10 VM (CORP) and an Ubuntu Server (DMZ); install the Wazuh Agent on both and connect them to the manager; install Sysmon on the Windows VM.
-4. **Monitoring Configuration** — In Zabbix, add pfSense and the DMZ server via SNMP templates; add the Windows client via an ICMP Ping template; enable *"File and Printer Sharing (Echo Request – ICMPv4-In)"* on the Windows Firewall so Zabbix pings succeed.
+1. **Network Preparation** - Install pfSense; configure three interfaces (LAN, CORP, DMZ); set subnets and firewall rules allowing management traffic from LAN to CORP/DMZ.
+2. **Core Server Deployment** - Install Ubuntu Server (`10.10.10.50`) on the LAN; install Docker + Docker Compose; deploy the Wazuh Manager/Indexer stack and Zabbix Server via `docker-compose.yml`.
+3. **Endpoint Agent Installation** - Deploy a Windows 10 VM (CORP) and an Ubuntu Server (DMZ); install the Wazuh Agent on both and connect them to the manager; install Sysmon on the Windows VM.
+4. **Monitoring Configuration** - In Zabbix, add pfSense and the DMZ server via SNMP templates; add the Windows client via an ICMP Ping template; enable *"File and Printer Sharing (Echo Request - ICMPv4-In)"* on the Windows Firewall so Zabbix pings succeed.
 
 ## Simulated Attack Scenarios & Detection
 
@@ -101,7 +101,7 @@ Incident response followed NIST SP 800-61 Rev 2: identify the source IP → cont
 
 ## Full Documentation
 
-Complete documentation — including the executive summary, scope, glossary, and full setup walkthrough — is available in [`docs/SOC_NOC_Complete_Documentation.docx`](docs/SOC_NOC_Complete_Documentation.docx).
+Complete documentation - including the executive summary, scope, glossary, and full setup walkthrough - is available in [`docs/SOC_NOC_Complete_Documentation.docx`](docs/SOC_NOC_Complete_Documentation.docx).
 
 ## Author
 
