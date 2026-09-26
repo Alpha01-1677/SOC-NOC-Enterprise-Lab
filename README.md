@@ -72,10 +72,10 @@ Attacks were launched from a Kali Linux host and validated against Wazuh alertin
 
 | Attack Type | Target | Mapped To |
 |---|---|---|
-| Reconnaissance / scanning | Network-wide | MITRE ATT&CK — Discovery |
-| Brute force | Endpoint auth | MITRE ATT&CK — Credential Access |
-| Privilege escalation (sudo) | Linux endpoint | MITRE ATT&CK — Privilege Escalation |
-| Web application attacks (SQLi, XSS) | DMZ web server (Nginx) | MITRE ATT&CK — Initial Access |
+| Reconnaissance / scanning | Network-wide | MITRE ATT&CK - Discovery |
+| Brute force | Endpoint auth | MITRE ATT&CK - Credential Access |
+| Privilege escalation (sudo) | Linux endpoint | MITRE ATT&CK - Privilege Escalation |
+| Web application attacks (SQLi, XSS) | DMZ web server (Nginx) | MITRE ATT&CK - Initial Access |
 
 Incident response followed NIST SP 800-61 Rev 2: identify the source IP → contain (pfSense firewall block) → eradicate the vulnerability → document the incident.
 
